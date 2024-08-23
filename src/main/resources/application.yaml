@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/search_engine
+    username: root
+    password: asdf0FDSA
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: false
+indexing-settings:
+  sites:
+    - url: https://teenwolfonline.org/
+      name: teenwolf
+    - url: https://temp-mail.org/ru/
+      name: temp-mail
